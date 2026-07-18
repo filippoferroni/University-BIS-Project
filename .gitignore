@@ -1,0 +1,5 @@
+# The exam event log is not public: never commit data files
+*.csv
+*.csv.zip
+.ipynb_checkpoints/
+.DS_Store
