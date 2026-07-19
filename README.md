@@ -6,6 +6,36 @@ Companion code repository for the exam project of **Business Information Systems
 
 Author: **Filippo Ferroni**
 
+## Case study
+
+The case study describes the patient journey through a hospital Emergency
+Department (ED) — arrival and initial assessment, clinical evaluation,
+execution of clinical procedures, and finally discharge or referral — and
+asks to analyse the end-to-end process to identify structural
+inefficiencies, assess conformance, and propose data-driven improvements.
+
+A **case** is a single patient stay, identified by `stay_id`; an **event**
+is the execution of a specific `activity` at a given `timestamp`. The
+dataset carries case-level attributes constant within a stay
+(`arrival_transport`, `disposition`, `gender`, `race`, `acuity`,
+`diagnosis_code`) and event-level attributes specific to each recording
+(physiological measurements, administered medications, clinical staff
+identifiers). The case study's Appendix lists the normal/abnormal medical
+ranges for the physiological measurements; their use in the analysis is
+optional.
+
+## Assignment
+
+The assignment asks for a Knowledge Uplift Trail that answers the
+analytical goals of the case study, defining and justifying five steps -
+mapped below to the notebook(s) that address each:
+
+1. **Preprocessing** - a pipeline for cleaning (e.g. missing data) and filtering (e.g. noise) → `NB01_Preprocessing.ipynb`
+2. **Performance analysis** of the event log → `NB02_Performance.ipynb`
+3. **Process discovery** and **conformance checking** → `NB03_DiscoveryConformance.ipynb`
+4. **Improvement identification** → improvement backlog, `NB05_Prediction.ipynb`
+5. **Additional question** - variant analysis via pattern-based feature generation: a binary mapping function φ groups cases by meaningful attributes (not only activity order), encoding each stay as a vector of 0s/1s over a set of properties → `NB04_PatternVariants.ipynb`
+
 ## Contents
 
 The analysis is organised in five notebooks, one per phase of the
